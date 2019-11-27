@@ -6,17 +6,19 @@
   <a href="#about">About us</a>
   <a href="#resources">Resources</a>
   <a href="#contact">Contact</a>
-  <a href="#login">Login</a>
+  <a href="http://localhost:3000/users/sign_in">Login</a>
 </div>
 
 </header>
 <body>
-<h1 style = "text-align:center">Parking system website</h1>
+
+<h1 style = "text-align:center">  <%= t('.title') %> </h1>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <body>
 
-<h2 style="text-align:center">Welcome to the website</h2>
+<h2 style = "text-align:center; font-size:25px">  <%= t('.welcome') %> </h2>
 
 <div class="container">
   <div class="mySlides">
@@ -78,7 +80,7 @@ function currentSlide(n) {
 function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
+  var dots = document.getElementsByClassName("trans");
   var captionText = document.getElementById("caption");
   if (n > slides.length) {slideIndex = 1}
   if (n < 1) {slideIndex = slides.length}
@@ -100,6 +102,6 @@ function showSlides(n) {
 
   <body>
     <div class="footer">
-  <img src="https://oneparkingsolution.co.uk/wp-content/uploads/2016/07/ops_logo.jpg" alt = "The bastards" style="width:100px;height:50px">
+  <img src="https://oneparkingsolution.co.uk/wp-content/uploads/2016/07/ops_logo.jpg" style="width:100px;height:50px">
   </div>
          </body>

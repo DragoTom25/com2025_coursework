@@ -30,4 +30,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_title: My car parking website
+  app_description: Everyone despises it but it is a car parking system for people to pay to
+
+  home:
+    home:
+      title: Car Parking System
+      welcome: Welcome to this webpage
+  contact_us: Complete this form to get in touch with us
