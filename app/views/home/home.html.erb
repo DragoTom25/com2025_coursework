@@ -1,0 +1,98 @@
+
+<header>
+<body>
+  <%= render 'shared/header' %>
+<%= yield %>
+<%= render 'shared/footer' %>
+
+
+
+
+</header>
+<body>
+
+<h1 style = "text-align:center">  <%= t('.title') %> </h1>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<body>
+
+<h2 style = "text-align:center; font-size:25px">  <%= t('.welcome') %> </h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+    <img src="https://www.pressandjournal.co.uk/wp-content/uploads/sites/2/2017/05/HC-car-park-609x372.jpg" style="width:1155px;height:570px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+    <img src="https://cdn.images.express.co.uk/img/dynamic/24/590x/parking-ticket-788735.jpg" style="width:1155px;height:570px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+    <img src="https://i.redd.it/seph19l12tr11.jpg" style="width:1155px;height:570px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+    <img src="http://home.bt.com/images/parking-136394026071103901-141030144155.jpg" style="width:1155px;height:570px">
+  </div>
+
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="https://www.pressandjournal.co.uk/wp-content/uploads/sites/2/2017/05/HC-car-park-609x372.jpg" style="width:190px;height:160px" onclick="currentSlide(1)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://cdn.images.express.co.uk/img/dynamic/24/590x/parking-ticket-788735.jpg" style="width:190px;height:160px" onclick="currentSlide(2)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="https://i.redd.it/seph19l12tr11.jpg" style="width:190px;height:160px" onclick="currentSlide(3)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="http://home.bt.com/images/parking-136394026071103901-141030144155.jpg" style="width:190px;height:160px" onclick="currentSlide(4)">
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("trans");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</body>

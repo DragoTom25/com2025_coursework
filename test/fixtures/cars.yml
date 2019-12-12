@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  car_plate: MyString
+  car_brand: MyString
+  car_model: MyString
+  colour: MyString
+  owners_reg: MyString
+
+two:
+  car_plate: MyString
+  car_brand: MyString
+  car_model: MyString
+  colour: MyString
+  owners_reg: MyString
