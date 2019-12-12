@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-car_detail = Cars.where(car_plate: 'LS61 VLO').first
+car_detail = Car.where(car_plate: 'LS61 VLO').first
 car_detail.delete if car_detail
 
-cars = Cars.create([car_plate: 'LS61 VLO', car_brand: 'Nissan', car_model: 'Micra', colour: 'Red', owners_reg: 'Thomas Ma'])
+cars = Car.create([car_plate: 'LS61 VLO', car_brand: 'Nissan', car_model: 'Micra', colour: 'Red', owners_reg: 'Thomas Ma'])
