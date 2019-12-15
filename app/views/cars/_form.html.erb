@@ -1,6 +1,6 @@
 <%= form_with(model: car, local: true) do |form| %>
   <% if car.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation">  <%# Prevents car from being made into table %>
       <h2><%= pluralize(car.errors.count, "error") %> prohibited this car from being saved:</h2>
 
       <ul>
@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field">             <%# Fields containing parts of the database %>
     <%= form.label :user_id %>
     <%= form.select :user_id, @users.collect {|d| [d.email, d.id]} %>
   </div>
