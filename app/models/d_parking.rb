@@ -1,2 +1,0 @@
-class DParking < ApplicationRecord
-end
