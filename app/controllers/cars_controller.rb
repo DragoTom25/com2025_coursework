@@ -15,6 +15,7 @@ class CarsController < ApplicationController
   # GET /cars/new
   def new
     @car = Car.new
+    @users = User.all
   end
 
   # GET /cars/1/edit
@@ -69,6 +70,6 @@ class CarsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def car_params
-      params.require(:car).permit(:car_plate, :car_brand, :car_model, :colour, :owners_reg)
+      params.require(:car).permit(:user_id, :car_plate, :car_brand, :car_model, :colour, :owners_reg)
     end
 end

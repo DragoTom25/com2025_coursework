@@ -1,9 +1,14 @@
 require 'test_helper'
 
+
 class CarTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
+
+  setup do
+    @user = users(:one)
+  end
 
   test 'should not save empty car' do
       cars = Car.new
@@ -20,8 +25,9 @@ class CarTest < ActiveSupport::TestCase
     cars.car_model = 'Fiesta'
     cars.colour = 'Black'
     cars.owners_reg = 'John Smith'
+    cars.user_id = @user
 
-    note.save
+    cars.save
     assert cars.valid?
 
     test 'should not save duplicate car number plate' do
@@ -32,15 +38,18 @@ class CarTest < ActiveSupport::TestCase
       cars1.car_model = 'Fiesta'
       cars1.colour = 'Black'
       cars1.owners_reg = 'John Smith'
+      cars1.user_id = @user
       cars1.save
       assert cars.valid?
 
-      note2 = Cars.new
+      cars2 = Cars.new
       cars2.car_plate = 'ISU7 2HU'
       cars2.car_brand = 'Ford'
       cars2.car_model = 'Fiesta'
       cars2.colour = 'Black'
       cars2.owners_reg = 'John Smith'
+      cars2.user_id = @user
+      cars2.save
       refute cars2.valid?
     end
   end

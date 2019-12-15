@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>User</th>
       <th>Car plate</th>
       <th>Car brand</th>
       <th>Car model</th>
@@ -17,6 +18,7 @@
   <tbody>
     <% @cars.each do |car| %>
       <tr>
+        <td><%= car.user_id %></td>
         <td><%= car.car_plate %></td>
         <td><%= car.car_brand %></td>
         <td><%= car.car_model %></td>

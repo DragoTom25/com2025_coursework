@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
     <title>ParkingCoursework</title>
     <%= csrf_meta_tags %>
@@ -17,15 +16,15 @@
 <% if alert %>
   <p class="alert alert-danger"><%= alert %></p>
 <% end %>
-    <%= yield %>
-  </body>
 
-  <p class="notice">
-  <%= notice %>
-  <p class="alert">
-    <%= alert %>
-  </p>
-</p>
+<%= render 'shared/header' %>
+<%= yield %>
+<%= render 'shared/footer' %>
+
+</body>
+
+
+
 
 <p class="navbar-text float-right">
 <% if user_signed_in? %>
@@ -38,7 +37,6 @@
 <% end %>
 </p>
 
-<% flash.each do |key, value| %>
-<%= content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank? %>
-<% end %>
+
+
 </html>

@@ -1,6 +1,7 @@
 class CreateCars < ActiveRecord::Migration[5.2]
   def change
     create_table :cars do |t|
+      t.belongs_to :user, foreign_key: true, null: false, index: true
       t.string :car_plate, null: false
       t.string :car_brand, null: false
       t.string :car_model, null: false

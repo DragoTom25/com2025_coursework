@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  user: one
   car_plate: MyString
   car_brand: MyString
   car_model: MyString
@@ -8,6 +9,7 @@ one:
   owners_reg: MyString
 
 two:
+  user: two
   car_plate: MyString
   car_brand: MyString
   car_model: MyString

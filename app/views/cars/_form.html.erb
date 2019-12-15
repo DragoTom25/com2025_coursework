@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :user_id %>
+    <%= form.select :user_id, @users.collect {|d| [d.email, d.id]} %>
+  </div>
+
+  <div class="field">
     <%= form.label :car_plate %>
     <%= form.text_field :car_plate %>
   </div>

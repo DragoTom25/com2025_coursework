@@ -9,4 +9,4 @@
 car_detail = Car.where(car_plate: 'LS61 VLO').first
 car_detail.delete if car_detail
 
-cars = Car.create([car_plate: 'LS61 VLO', car_brand: 'Nissan', car_model: 'Micra', colour: 'Red', owners_reg: 'Thomas Ma'])
+cars = Car.create([user_id: '1', car_plate: 'LS61 VLO', car_brand: 'Nissan', car_model: 'Micra', colour: 'Red', owners_reg: 'Thomas Ma'])

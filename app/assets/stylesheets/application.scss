@@ -32,7 +32,7 @@
   .topnav a {
     float: left;
     color: #ffffff;
-    text-align: center;
+    text-align: left;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
@@ -43,7 +43,31 @@
     color: black;
   }
 
-  .topnav a.active {
+  .toprightnav a.active {
+    background-color: #000000;
+    color: white;
+  }
+
+  .toprightnav {
+    overflow: hidden;
+    background-color: #a51d00;
+  }
+
+  .toprightnav a {
+    float: right;
+    color: #ffffff;
+    text-align: right;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .toprightnav a:hover {
+    background-color: #ffffff;
+    color: black;
+  }
+
+  .toprightnav a.active {
     background-color: #000000;
     color: white;
   }
@@ -56,11 +80,12 @@
    background-color: #a51d00;
    color: white;
    text-align: right;
+   z-index: 100;
   }
 
   .textbox {
   width: 1000px;
-  height: 300px;
+  height: 200px;
   padding: 10px;
   border: 10px solid #a51d00;
   margin: 0;

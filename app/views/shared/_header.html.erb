@@ -1,11 +1,32 @@
 <header>
 <div class="topnav">
 <a class="active" href="http://localhost:3000">Home</a>
-<b><a href="#booking">Book Now</a></b>
+<b><a href="book_now">Book Now</a></b>
 <a href="about">About us</a>
 <a href="#resources">Resources</a>
-<a href="http://localhost:3000/contact">Contact</a>
-<a href="http://localhost:3000/users/sign_in">Login</a>
+<a href="contact">Contact</a>
+<a href="cars">Add a car to a account</a>
+<div class="toprightnav">
+<nav></nav>
+<% if user_signed_in? %>
+<%= "| Currently logged in as: #{current_user.email}" %>
+<%= link_to t('profile'), edit_user_registration_path %>
+<%= '|' %>
+<%= link_to t('logout'), destroy_user_session_path, method: 'delete' %>
+<% else %>
+<%= link_to t('login'), new_user_session_path %>
+<%= '|' %>
+<%= link_to t('sign_up'), new_user_registration_path %>
+<% end %>
 </div>
+</div>
+
+
+
+
+
+
+
+
 
 </header>

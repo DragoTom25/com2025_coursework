@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class CarsControllerTest < ActionDispatch::IntegrationTest
+
+
   setup do
     @car = cars(:one)
   end

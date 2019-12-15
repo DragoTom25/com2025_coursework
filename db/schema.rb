@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(version: 2019_12_12_190432) do
 
   create_table "cars", force: :cascade do |t|
+    t.integer "user_id", null: false
     t.string "car_plate", null: false
     t.string "car_brand", null: false
     t.string "car_model", null: false
@@ -21,6 +22,7 @@ ActiveRecord::Schema.define(version: 2019_12_12_190432) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["car_plate"], name: "index_cars_on_car_plate", unique: true
+    t.index ["user_id"], name: "index_cars_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

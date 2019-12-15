@@ -8,6 +8,10 @@ class HomeController < ApplicationController
   def contact
   end
 
+  def book_now
+    before_action :authenticate_user!
+  end
+
   def request_contact
     name = params[:name]
     email = params[:email]
