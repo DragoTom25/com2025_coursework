@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_15_100720) do
+ActiveRecord::Schema.define(version: 2019_12_15_105154) do
 
   create_table "cars", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(version: 2019_12_15_100720) do
     t.datetime "updated_at", null: false
     t.index ["car_plate"], name: "index_cars_on_car_plate", unique: true
     t.index ["user_id"], name: "index_cars_on_user_id"
+  end
+
+  create_table "d_parkings", force: :cascade do |t|
+    t.string "car_plate", null: false
+    t.string "disability", null: false
+    t.string "gender", null: false
+    t.string "name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["car_plate"], name: "index_d_parkings_on_car_plate", unique: true
   end
 
   create_table "disableds", force: :cascade do |t|
