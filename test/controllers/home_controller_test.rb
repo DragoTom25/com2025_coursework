@@ -5,35 +5,39 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
     get root_url
     assert_response :success
+
+    assert_select 'title', 'ParkingCoursework'
+    assert_select 'h1', 'Parking Solutions'
+    assert_select 'h2', 'Welcome to this webpage'
   end
 
-  test "should get contact" do
-    get contact_url
-    assert_response:success
+    test "should get contact" do
+      get contact_url
+      assert_response:success
 
-    assert_template layout: 'application'
+      assert_template layout: 'application'
 
-    assert_select 'title', 'My Notes'
-    assert_select 'h1', 'Contact Us'
-    assert_select 'p', 'Complete the following form to get in touch with us.'
-  end
-
-  test "should post request contact but no email" do
-      post request_contact_url
-
-      assert_response :redirect
-      assert_not_empty flash[:alert]
-      assert_nil flash[:notice]
+      assert_select 'title', 'ParkingCoursework'
+      assert_select 'h1', 'Contact Us'
+      assert_select 'h2', 'Complete this form to get in touch with us'
     end
 
+    test "should post request contact but no email" do
+        post request_contact_url
 
-    test "should post request contact" do
-      post request_contact_url, params:
-      {name: "Matthew", email: "matthew@me.com",
-        telephone: "1234567890", message: "Hello"}
         assert_response :redirect
-        assert_nil flash[:alert]
-        assert_not_empty flash[:notice]
-  end
+        assert_not_empty flash[:alert]
+        assert_nil flash[:notice]
+      end
+
+
+      test "should post request contact" do
+        post request_contact_url, params:
+        {name: "Matthew", email: "matthew@me.com",
+          telephone: "1234567890", message: "Hello"}
+          assert_response :redirect
+          assert_nil flash[:alert]
+          assert_not_empty flash[:notice]
+    end
 
 end

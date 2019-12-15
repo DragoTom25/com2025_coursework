@@ -3,10 +3,9 @@
 </header>
 
 <h1>
-  <center><%= t('.ctitle') %> </center>
+  <center><%= t('.ctitle') %> </center> </h1>
   <br>
-  <h2> <%= t('.contact_us') %> </h2>
-</h1>
+  <h2> <%= t('.contactus') %> </h2>
 
 <%= form_tag request_contact_path, method: 'post' do %>
   <%= label_tag :name, t('.name') %>

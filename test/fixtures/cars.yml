@@ -1,16 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user: one
-  car_plate: MyString
+  car_plate: MC89 6JU
   car_brand: MyString
   car_model: MyString
   colour: MyString
   owners_reg: MyString
 
 two:
-  user: two
-  car_plate: MyString
+  car_plate: LP38 9FS
   car_brand: MyString
   car_model: MyString
   colour: MyString

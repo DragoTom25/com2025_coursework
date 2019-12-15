@@ -1,4 +1,6 @@
 class HomeController < ApplicationController
+  before_action :authenticate_user!
+  
   def home
   end
 
@@ -8,8 +10,8 @@ class HomeController < ApplicationController
   def contact
   end
 
-  def book_now
-    before_action :authenticate_user!
+  def booking
+
   end
 
   def request_contact

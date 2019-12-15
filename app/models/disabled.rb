@@ -1,0 +1,2 @@
+class Disabled < ApplicationRecord
+end
