@@ -1,0 +1,99 @@
+<body>
+
+<h2 style = "text-align:center"><%= t('.btitle') %> </h2>
+
+<button id="DisabledParking">Car Park Disabled</button>
+<br>
+<button id="CarParkA">Car Park A</button>
+<br>
+<button id="CarParkB">Car Park B</button>
+<br>
+<button id="CarParkC">Car Park C</button>
+<br>
+<button id="CarParkD">Car Park D</button>
+<br>
+<button id="CarParkCoach">Car Park Coaches</button>
+
+<script>
+document.getElementById("DisabledParking").onclick = function() {disabledBooking()};
+
+function disabledBooking() {
+
+   if (confirm("Are you sure you want this parking?")) {
+     respon = "Confirming your vehicle into this car park";
+   } else {
+     respon = "Please choose a car park to reserve a spot";
+   }
+   alert(respon)
+}
+</script>
+
+<script>
+document.getElementById("CarParkA").onclick = function() {parkABooking()};
+
+function parkABooking() {
+
+   if (confirm("Are you sure you want this parking?")) {
+     respon = "Confirming your vehicle into this car park";
+   } else {
+     respon = "Please choose a car park to reserve a spot";
+   }
+   alert(respon)
+}
+</script>
+
+<script>
+document.getElementById("CarParkB").onclick = function() {parkBBooking()};
+
+function parkBBooking() {
+
+   if (confirm("Are you sure you want this parking?")) {
+     respon = "Confirming your vehicle into this car park";
+   } else {
+     respon = "Please choose a car park to reserve a spot";
+   }
+   alert(respon)
+}
+</script>
+
+<script>
+
+document.getElementById("CarParkC").onclick = function() {parkCBooking()};
+function parkCBooking() {
+
+   if (confirm("Are you sure you want this parking?")) {
+     respon = "Confirming your vehicle into this car park";
+   } else {
+     respon = "Please choose a car park to reserve a spot";
+   }
+   alert(respon)
+}
+</script>
+
+<script>
+
+document.getElementById("CarParkD").onclick = function() {parkDBooking()};
+function parkDBooking() {
+
+   if (confirm("Are you sure you want this parking?")) {
+     respon = "Confirming your vehicle into this car park"; 
+   } else {
+     respon = "Please choose a car park to reserve a spot";
+   }
+   alert(respon)
+}
+</script>
+
+<script>
+
+document.getElementById("CarParkCoach").onclick = function() {parkCoachBooking()};
+function parkCoachBooking() {
+
+   if (confirm("Are you sure you want this parking?")) {
+     respon = "Confirming your vehicle into this car park";
+   } else {
+     respon = "Please choose a car park to reserve a spot";
+   }
+   alert(respon)
+}
+</script>

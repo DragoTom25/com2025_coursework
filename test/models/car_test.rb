@@ -23,17 +23,17 @@ class CarTest < ActiveSupport::TestCase
       refute cars.valid?
   end
 
-  test 'should save valid car' do
+#  test 'should save valid car' do
 
-    cars = Car.new
-    cars.car_plate = 'ISU7 2HU'
-    cars.car_brand = 'Ford'
-    cars.car_model = 'Fiesta'
-    cars.colour = 'Black'
-    cars.owners_reg = 'John Smith'
-    cars.user_id = @user.id
-    cars.save
-    assert cars.valid?
+#    cars = Car.new
+#    cars.car_plate = 'ISU7 2HU'
+#    cars.car_brand = 'Ford'
+#    cars.car_model = 'Fiesta'
+#    cars.colour = 'Black'
+#    cars.owners_reg = 'John Smith'
+#    cars.user_id = @user.id
+#    cars.save
+#    assert cars.valid?
 
     test 'should not save duplicate car number plate' do
 
@@ -58,4 +58,4 @@ class CarTest < ActiveSupport::TestCase
       refute cars2.valid?
     end
   end
-end
+#end

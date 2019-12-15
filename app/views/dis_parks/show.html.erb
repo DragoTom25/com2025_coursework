@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Car reg:</strong>
+  <%= @dis_park.car_reg %>
+</p>
+
+<p>
+  <strong>Disability:</strong>
+  <%= @dis_park.disability %>
+</p>
+
+<p>
+  <strong>Dname:</strong>
+  <%= @dis_park.dname %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @dis_park.gender %>
+</p>
+
+<%= link_to 'Edit', edit_dis_park_path(@dis_park) %> |
+<%= link_to 'Back', dis_parks_path %>

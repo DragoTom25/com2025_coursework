@@ -12,3 +12,8 @@ car_detail = Car.where(car_plate: 'LS61 VLO').first
 car_detail.delete if car_detail
 
 cars = Car.create([user_id: '1', car_plate: 'LS61 VLO', car_brand: 'Nissan', car_model: 'Micra', colour: 'Red', owners_reg: 'Thomas Ma'])
+
+d_park = Dis_Park.where(car_reg: 'BSH8 HSY').first
+d_park.delete if d_park
+
+dis_parks = Dis_Park.create([car_reg: 'BSH8 HSY', disability: 'ADHD', dname: 'Sam Yohan', gender: 'Male'])

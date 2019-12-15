@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  car_reg: DMJ7 9HU
+  disability: ADHD
+  dname: Denis Fowler
+  gender: Male
+
+two:
+  car_reg: LH79 M5H
+  disability: Autism
+  dname: Jenice Denis
+  gender: Female

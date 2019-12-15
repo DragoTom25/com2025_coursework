@@ -1,11 +1,12 @@
 <header>
 <div class="topnav">        <%# Code for my navigation bar across my website %>
 <a class="active" href="http://localhost:3000">Home</a>
-<b><a href="booking">Book Now</a></b>
+<b><a href="Bookings">Book Now</a></b>
 <a href="about">About us</a>
 <a href="contact">Contact</a>
 <a href="cars">Add a car to a account</a>
 <div class="toprightnav">         <%# Ensures certain buttons on navbar gets sent to the right %>
+  <a href="dis_parks">Apply for disabled parking</a>
 <nav></nav>
 <% if user_signed_in? %>            <%# Checks if user is logged in or not and will provide the options deemed suitable %>
 <%= "| Currently logged in as: #{current_user.email}" %>

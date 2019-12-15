@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_15_143956) do
+ActiveRecord::Schema.define(version: 2019_12_15_151959) do
 
   create_table "cars", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -25,13 +25,15 @@ ActiveRecord::Schema.define(version: 2019_12_15_143956) do
     t.index ["user_id"], name: "index_cars_on_user_id"
   end
 
-  create_table "d_parkings", force: :cascade do |t|
-    t.string "car_plate", null: false
+
+  create_table "dis_parks", force: :cascade do |t|
+    t.string "car_reg", null: false
     t.string "disability", null: false
-    t.string "name", null: false
+    t.string "dname", null: false
     t.string "gender", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["car_reg"], name: "index_dis_parks_on_car_reg", unique: true
   end
 
   create_table "users", force: :cascade do |t|

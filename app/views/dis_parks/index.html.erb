@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dis Parks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th style="padding: 5px;">Car registration</th>
+      <th style="padding: 5px;">Disability</th>
+      <th style="padding: 5px;">Name</th>
+      <th style="padding: 5px;">Gender</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dis_parks.each do |dis_park| %>
+      <tr>
+        <td style="padding: 5px;"><%= dis_park.car_reg %></td>
+        <td style="padding: 5px;"><%= dis_park.disability %></td>
+        <td style="padding: 5px;"><%= dis_park.dname %></td>
+        <td style="padding: 5px;"><%= dis_park.gender %></td>
+        <td style="padding: 5px;"><%= link_to 'Show', dis_park %></td>
+        <td style="padding: 5px;"><%= link_to 'Edit', edit_dis_park_path(dis_park) %></td>
+        <td style="padding: 5px;"><%= link_to 'Destroy', dis_park, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dis Park', new_dis_park_path %>
