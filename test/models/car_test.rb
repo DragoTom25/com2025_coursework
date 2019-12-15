@@ -24,6 +24,7 @@ class CarTest < ActiveSupport::TestCase
   end
 
   test 'should save valid car' do
+
     cars = Car.new
     cars.car_plate = 'ISU7 2HU'
     cars.car_brand = 'Ford'
@@ -31,7 +32,6 @@ class CarTest < ActiveSupport::TestCase
     cars.colour = 'Black'
     cars.owners_reg = 'John Smith'
     cars.user_id = @user.id
-
     cars.save
     assert cars.valid?
 
@@ -45,9 +45,9 @@ class CarTest < ActiveSupport::TestCase
       cars1.owners_reg = 'John Smith'
       cars1.user_id = @user.id
       cars1.save
-      assert cars.valid?
+      assert cars1.valid?
 
-      cars2 = Cars.new
+      cars2 = Car.new
       cars2.car_plate = 'ISU7 2HU'
       cars2.car_brand = 'Ford'
       cars2.car_model = 'Fiesta'

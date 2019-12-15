@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper">             <%# This formats the car park map and uses a list of dots to represent parking spaces %>
 <ul class="row1">
 <li class="dot"></li>
 <li class="dot"></li>
@@ -92,7 +92,7 @@
   <p style="margin-top:20px;"></p>
 </div>
 
-<script>
+<script>                                          <%# Javascript which allows the dots to be interactive %>
   $(".dot").click(function(){
   $(this).animate({borderRadius:'10px'});
   	});

@@ -16,7 +16,7 @@
 
 <h2 style = "text-align:center; font-size:25px">  <%= t('.welcome') %> </h2>
 
-<div class="container">
+<div class="container">                                       <%# HTML code for the slideslow on the homepage %>
   <div class="mySlides">
     <div class="numbertext">1 / 4</div>
     <img src="https://www.pressandjournal.co.uk/wp-content/uploads/sites/2/2017/05/HC-car-park-609x372.jpg" style="width:1155px;height:570px">
@@ -45,7 +45,7 @@
     <p id="caption"></p>
   </div>
 
-  <div class="row">
+  <div class="row">                                       <%# Previewed images %>
     <div class="column">
       <img class="demo cursor" src="https://www.pressandjournal.co.uk/wp-content/uploads/sites/2/2017/05/HC-car-park-609x372.jpg" style="width:190px;height:160px" onclick="currentSlide(1)">
     </div>
@@ -61,7 +61,7 @@
   </div>
 </div>
 
-<script>
+<script>                                                                        <%# Javascript to allow the slideslow to function properly and scroll through the pictures %>
 var slideIndex = 1;
 showSlides(slideIndex);
 

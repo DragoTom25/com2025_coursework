@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+# Provides values to be taken in for the tests
 one:
+  user_id: 1
   car_plate: MC89 6JU
   car_brand: MyString
   car_model: MyString
@@ -8,6 +9,7 @@ one:
   owners_reg: MyString
 
 two:
+  user_id: 2
   car_plate: LP38 9FS
   car_brand: MyString
   car_model: MyString

@@ -29,6 +29,7 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
+#en.yml file which stores things locally for my website to ensure website is DRY
 en:
   app_title: My car parking website
   app_description: Everyone despises it but it is a car parking system for people to pay to

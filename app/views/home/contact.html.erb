@@ -3,11 +3,11 @@
 </header>
 
 <h1>
-  <center><%= t('.ctitle') %> </center> </h1>
+  <center><%= t('.ctitle') %> </center> </h1>               <%# Grabs data from en.yml local file %>
   <br>
   <h2> <%= t('.contactus') %> </h2>
 
-<%= form_tag request_contact_path, method: 'post' do %>
+<%= form_tag request_contact_path, method: 'post' do %>                 <%# This forms the layout for the contacts page %>
   <%= label_tag :name, t('.name') %>
   <%= text_field_tag :name, '', title: t('.enter_name'), size: 50 %>
   <%= label_tag :email, t('.email') %>

@@ -1,14 +1,14 @@
 <header>
-<div class="topnav">
+<div class="topnav">        <%# Code for my navigation bar across my website %>
 <a class="active" href="http://localhost:3000">Home</a>
 <b><a href="booking">Book Now</a></b>
 <a href="about">About us</a>
 <a href="#resources">Resources</a>
 <a href="contact">Contact</a>
 <a href="cars">Add a car to a account</a>
-<div class="toprightnav">
+<div class="toprightnav">         <%# Ensures certain buttons on navbar gets sent to the right %>
 <nav></nav>
-<% if user_signed_in? %>
+<% if user_signed_in? %>            <%# Checks if user is logged in or not and will provide the options deemed suitable %>
 <%= "| Currently logged in as: #{current_user.email}" %>
 <%= link_to t('profile'), edit_user_registration_path %>
 <%= '|' %>

@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
-  before_action :authenticate_user!
-  
+
+
   def home
   end
 
@@ -13,7 +13,7 @@ class HomeController < ApplicationController
   def booking
 
   end
-
+# Checks the fields in the contacts page and will provide the following options
   def request_contact
     name = params[:name]
     email = params[:email]
