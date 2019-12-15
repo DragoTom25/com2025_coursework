@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class DisabledTest < ActiveSupport::TestCase
+class DParkingTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
